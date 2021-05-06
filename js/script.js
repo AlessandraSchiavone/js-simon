@@ -29,11 +29,12 @@ alert("Memorizza questi numeri:\n"+ array5RandomPC);
 // Da li parte un timer di 30 secondi.
 var inizioTimer=30;
 var timer = setInterval( function(){
-    console.log(inizioTimer);
+    document.getElementById("timer").innerHTML = "<p>"+inizioTimer+"</p>"
+    // console.log(inizioTimer);
     if(inizioTimer == 0){
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+        document.getElementById("timer").innerHTML = "<p>Fine del gioco!</p>"
         clearInterval(timer);
-        console.log("Fine tempo!");
         var array5Utente = [];
     do{
         numeroUtente = parseInt(prompt("Ora Tocca a te\nInserisci un numero:"));
@@ -58,16 +59,19 @@ var timer = setInterval( function(){
             // console.log(k);
         }
     }
-    console.log("I numeri del gioco sono:", array5RandomPC);
-    console.log("I numeri inseriti dall'utente sono:", array5Utente);
+    alert("I numeri del gioco sono:"+ array5RandomPC+"\nI numeri inseriti dall'utente sono:"+ array5Utente)
+    // console.log("I numeri del gioco sono:", array5RandomPC);
+    // console.log("I numeri inseriti dall'utente sono:", array5Utente);
     if(k==0){
-        console.log("Non hai indovinato nessun numero!")
+        alert("Non hai indovinato nessun numero!")
     }else if(k==1){  
-        console.log("Hai indovinato "+ k + " numero");
-        console.log("Il numero indovinato è: ", numeriIndovinati)
+        alert("Hai indovinato "+ k + " numero"+"\nIl numero indovinato è: "+ numeriIndovinati );
+        // console.log("Hai indovinato "+ k + " numero");
+        // console.log("Il numero indovinato è: ", numeriIndovinati)
     }else{
-        console.log("Hai indovinato  "+ k + " numeri");
-        console.log("I numeri indovinati sono: ", numeriIndovinati)
+        alert("Hai indovinato "+ k + " numeri"+"\nI numeri indovinati sono: "+ numeriIndovinati );
+        // console.log("Hai indovinato  "+ k + " numeri");
+        // console.log("I numeri indovinati sono: ", numeriIndovinati)
     }
     }else{
         inizioTimer--;
