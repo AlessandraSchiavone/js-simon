@@ -27,7 +27,7 @@ while(array5RandomPC.length < 5){
 
 alert("Memorizza questi numeri:\n"+ array5RandomPC);
 // Da li parte un timer di 30 secondi.
-var inizioTimer=5;
+var inizioTimer=30;
 var timer = setInterval( function(){
     console.log(inizioTimer);
     if(inizioTimer == 0){
