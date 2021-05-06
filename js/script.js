@@ -33,7 +33,7 @@ var timer = setInterval( function(){
     // console.log(inizioTimer);
     if(inizioTimer == 0){
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-        document.getElementById("timer").innerHTML = "<p>Fine del gioco!</p>"
+        document.getElementById("timer").innerHTML = "<p>Fine del tempo!</p>"
         clearInterval(timer);
         var array5Utente = [];
     do{
